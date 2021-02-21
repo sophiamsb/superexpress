@@ -1,0 +1,31 @@
+@import "fonts";
+@import "animation";
+@import "infinitescroll";
+@import "mobile";
+
+/*___ General___*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow: auto;
+  min-height: 100vh;
+  font-family: inherit;
+}
+
+/*___ STYLE TEXT__*/
+.cascade {
+  marquee {
+    z-index: 2;
+    position: fixed;
+    font-family: "Edwardian Script ITC";
+    font-size: 1em;
+  }
+}
+
+
+
