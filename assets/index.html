@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>New Express</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <header>
+      <div class="cascade">
+        <marquee
+          style="left: 18px; top: 97px; height: 200px"
+          scrollamount="3"
+          direction="down"
+          >Professional</marquee
+        >
+        <marquee
+          style="left: 1px; top: 89px; height: 100px"
+          scrollamount="7"
+          direction="down"
+          >Top Quality</marquee
+        >
+        <marquee
+          style="left: 111px; top: 7px; height: 302px"
+          scrollamount="4"
+          direction="down"
+          >Beautiful Princess</marquee
+        >
+        <marquee
+          style="left: 225px; top: 83px; height: 371px"
+          scrollamount="3"
+          direction="down"
+          >Kiss Love</marquee
+        >
+        <marquee
+          style="left: 105px; top: 53px; height: 317px"
+          scrollamount="2"
+          direction="down"
+          >All Natural</marquee
+        >
+        <marquee
+          style="left: 168px; top: 69px; height: 369px"
+          scrollamount="1"
+          direction="down"
+          >Hairstyling</marquee
+        >
+        <marquee
+          style="left: 130px; top: 117px; height: 289px"
+          scrollamount="7"
+          direction="down"
+          >Accessories</marquee
+        >
+        <marquee
+          style="left: 176px; top: 57px; height: 78px"
+          scrollamount="7"
+          direction="down"
+          >Eyebrows</marquee
+        >
+        <marquee
+          style="left: 16px; top: 57px; height: 56px"
+          scrollamount="5"
+          direction="down"
+          >Brazilian</marquee
+        >
+        <marquee
+          style="left: 300px; top: 86px; height: 194px"
+          scrollamount="2"
+          direction="down"
+          >Computer</marquee
+        >
+        <marquee
+          style="left: 292px; top: 10px; height: 251px"
+          scrollamount="6"
+          direction="down"
+          >Apple</marquee
+        >
+        <marquee
+          style="left: 278px; top: 74px; height: 154px"
+          scrollamount="1"
+          direction="down"
+          >Brand</marquee
+        >
+        <marquee
+          style="left: 241px; top: 72px; height: 82px"
+          scrollamount="3"
+          direction="down"
+          >HD</marquee
+        >
+        <marquee
+          style="left: 276px; top: 32px; height: 70px"
+          scrollamount="8"
+          direction="down"
+          >Laptop</marquee
+        >
+        <marquee
+          style="left: 272px; top: 15px; height: 334px"
+          scrollamount="11"
+          direction="down"
+          >Accessory</marquee
+        >
+        <marquee
+          style="left: 90px; top: 38px; height: 167px"
+          scrollamount="7"
+          direction="down"
+          >New</marquee
+        >
+        <marquee
+          style="left: 275px; top: 108px; height: 375px"
+          scrollamount="7"
+          direction="down"
+          >Smartphone</marquee
+        >
+        <marquee
+          style="left: 22px; top: 76px; height: 12px"
+          scrollamount="7"
+          direction="down"
+          >WIFI</marquee
+        >
+        <marquee
+          style="left: 89px; top: 54px; height: 366px"
+          scrollamount="2"
+          direction="down"
+          >Samsung</marquee
+        >
+        <marquee
+          style="left: 26px; top: 72px; height: 358px"
+          scrollamount="1"
+          direction="down"
+          >Galaxy</marquee
+        >
+        <marquee
+          style="left: 3px; top: 44px; height: 130px"
+          scrollamount="3"
+          direction="down"
+          >Keyboard</marquee
+        >
+        <marquee
+          style="left: 300px; top: 108px; height: 375px"
+          scrollamount="7"
+          direction="down"
+          >memory</marquee
+        >
+        <marquee
+          style="left: 335px; top: 76px; height: 125px"
+          scrollamount="7"
+          direction="down"
+          >Cherry</marquee
+        >
+        <marquee
+          style="left: 400px; top: 54px; height: 366px"
+          scrollamount="2"
+          direction="down"
+          >Coiffure</marquee
+        >
+        <marquee
+          style="left: 355px; top: 72px; height: 358px"
+          scrollamount="1"
+          direction="down"
+          >Nails</marquee
+        >
+        <marquee
+          style="left: 380px; top: 44px; height: 375px"
+          scrollamount="3"
+          direction="down"
+          >Makeup</marquee
+        >
+      </div>
+    </header>
+    <main>
+      <!-- images will be loaded here with figure and figcaption -->
+    </main>
+
+    <footer>
+      <p>Hello this is me</p>
+    </footer>
+  </body>
+  <script>
+    const URL =
+      "https://gist.githubusercontent.com/sophiamsb/5ef81859042851c8538f6979aa04ad80/raw/6c79ec5d10dd99c8c0e123a7760b8bee08bae14e/infinite.json";
+    document.addEventListener("DOMContentLoaded", () => {
+      //set up the IntersectionObserver to load more images if the footer is visible.
+      //URL - https://gist.githubusercontent.com/prof3ssorSt3v3/1944e7ba7ffb62fe771c51764f7977a4/raw/c58a342ab149fbbb9bb19c94e278d64702833270/infinite.json
+      let options = {
+        root: null,
+        rootMargins: "0px",
+        threshold: 0.5,
+      };
+      const observer = new IntersectionObserver(handleIntersect, options);
+      observer.observe(document.querySelector("footer"));
+      //an initial load of some data
+      getData();
+    });
+    function handleIntersect(entries) {
+      if (entries[0].isIntersecting) {
+        console.warn("something is intersecting with the viewport");
+        getData();
+      }
+    }
+    function getData() {
+      let main = document.querySelector("main");
+      console.log("fetch some JSON data");
+      fetch(URL)
+        .then((response) => response.json())
+        .then((data) => {
+          // data.items[].img, data.items[].name
+          data.items.forEach((item) => {
+            let fig = document.createElement("figure");
+            let fc = document.createElement("figcaption");
+            let img = document.createElement("img");
+            img.src = item.img;
+            img.alt = item.name;
+            fc.textContent = item.name;
+            fig.appendChild(img);
+            fig.appendChild(fc);
+            main.appendChild(fig);
+          });
+        });
+    }
+
+    const cursor = document.querySelector(".cursor");
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let cursorX = 0;
+    let cursorY = 0;
+
+    let speed = 0.5; // change to increase the ease.
+
+    function animate() {
+      let distX = mouseX - cursorX;
+      let distY = mouseY - cursorY;
+
+      cursorX = cursorX + distX * speed;
+      cursorY = cursorY + distY * speed;
+
+      cursor.style.left = cursorX + "px";
+      cursor.style.top = cursorY + "px";
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    document.addEventListener("mousemove", (event) => {
+      mouseX = event.pageX;
+      mouseY = event.pageY;
+    });
+  </script>
+</html>
