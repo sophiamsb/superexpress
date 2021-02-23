@@ -17,7 +17,7 @@ body {
   font-family: inherit;
 }
 
-/*___ STYLE TEXT__*/
+/*___cascade__*/
 .cascade {
   marquee {
     z-index: 2;
@@ -25,6 +25,39 @@ body {
     font-family: "Edwardian Script ITC";
     font-size: 1em;
   }
+}
+
+/*__ BUBBLE SPEECH__*/
+
+main figcaption { 
+	background-position: center;
+  background-repeat: no-repeat !important;
+	background-size: 100% 100%;
+  margin: 0 auto;
+	text-align: center;
+	height: 0;
+	box-sizing: content-box;
+  line-height:1.5;
+  font-size: 2rem;
+  font-family: "Cooper Std";
+  color: white;
+  text-shadow: 4px 4px 4px rgb(0, 17, 253);
+  overflow-wrap: break-word;
+}
+main figcaption {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/speech-bubble.svg); 
+  width: fit-content;
+  max-width:50%;
+  height:fit-content;
+  max-height:30%;
+  padding-top: 6%;
+	padding-bottom: 15%;
+  padding-left: 5%;
+	padding-right: 5%;
+  top:10%;
+  left:48%;
+  position:absolute;
+  z-index:1;
 }
 
 

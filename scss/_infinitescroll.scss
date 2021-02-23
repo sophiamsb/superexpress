@@ -1,12 +1,11 @@
 main {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 45% 45%;
   grid-gap: 1rem;
+  justify-content:center;
   margin: 0 auto;
   grid-template-rows: auto;
   overflow-x: hidden;
-  margin-left: 3em;
-  margin-right: 3em;
   max-width: 100%;
 }
 
@@ -18,12 +17,7 @@ main {
 main figure {
   width: auto;
   height: auto;
-}
-main figcaption {
-  font-size: 2rem;
-  font-family: "Cooper Std";
-  color: white;
-  text-shadow: 4px 4px 4px rgb(0, 17, 253);
+  position:relative;
 }
 
 main img {
